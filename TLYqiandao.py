@@ -39,7 +39,7 @@ def getmidstring(html, start_str, end):
 
 
 def tly():
-    signUrl="https://tly30.com/modules/index.php"
+    signUrl="https://tly31.com/modules/index.php"
     hearder={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36','Cookie':cookie}
 
     res=requests.get(url=signUrl,headers=hearder).text
@@ -51,8 +51,8 @@ def tly():
     if t-timeStamp>86400:
         print("距上次签到时间大于24小时啦,可签到")
         #获取验证码图片
-        captchaUrl="https://tly30.com/other/captcha.php"
-        signurl="https://tly30.com/modules/_checkin.php?captcha="
+        captchaUrl="https://tly31.com/other/captcha.php"
+        signurl="https://tly31.com/modules/_checkin.php?captcha="
         hearder={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36','Cookie':cookie}
         res1=requests.get(url=captchaUrl,headers=hearder)
         base64_data = base64.b64encode(res1.content)
